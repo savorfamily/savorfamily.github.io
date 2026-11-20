@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>우르부르르 (wurubururu) — desk notification device for Gmail and Calendar</title>
+<meta name="description" content="우르부르르 (wurubururu) brings the 2001 Wuruburu USB toy back to life as a desk notifier for new Gmail messages and Google Calendar events on macOS and Windows.">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <img src="assets/logo-120.png" alt="">
+  <a class="name" href="./">우르부르르 · wurubururu</a>
+  <nav>
+    <a href="./" aria-current="page">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="#ko">한국어</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <h1>우르부르르<small>wurubururu — a desk notification device for Gmail, Google Calendar and your websites</small></h1>
+  <p class="lead">우르부르르 (wurubururu) is a free, open-source desktop app for macOS and Windows that brings the
+    <b>Wuruburu</b> USB internet-radio toy (Ddanzi, 2001) back to life. When a new email or an upcoming event
+    arrives, the toy's ears blink. Press its foot to open the message, or have it read the title aloud.</p>
+
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/savorfamily/wurubururu/releases/latest">Download for macOS / Windows</a>
+    <a class="btn" href="https://github.com/savorfamily/wurubururu">Source code (GitHub)</a>
+    <a class="btn" href="privacy.html">Privacy policy</a>
+  </div>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><h3>New Gmail messages</h3><p>The ears blink when a new unread message arrives in your inbox. Messages Gmail marks as Important or Starred blink <span class="ear" style="background:var(--red)"></span>red; others blink <span class="ear" style="background:var(--green)"></span>green. Promotions and Social tabs are skipped.</p></div>
+    <div class="card"><h3>Upcoming calendar events</h3><p>A reminder a few minutes before each event on your primary Google Calendar, and again when it starts.</p></div>
+    <div class="card"><h3>Foot buttons</h3><p>Left foot opens the message or event in your browser. Right foot reads its title aloud through the toy's speaker. The head button dismisses alerts.</p></div>
+    <div class="card"><h3>Website monitoring and other alerts</h3><p>Optional checks for your own websites, focus timer, internet radio, and alerts from build or deploy scripts.</p></div>
+  </div>
+
+  <h2>How Google user data is used</h2>
+  <p>To show notifications, 우르부르르 asks for two read-only Google permissions. You sign in with Google from the app's settings screen and can disconnect at any time.</p>
+  <table>
+    <thead><tr><th>Permission</th><th>What the app reads</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><code>gmail.metadata</code></td><td>Sender, subject, labels and IDs of new unread inbox messages. <b>Never the message body or attachments.</b></td><td>To blink the ears for new mail, choose red or green from Gmail's own Important/Starred labels, read the subject aloud, and open the message in Gmail.</td></tr>
+      <tr><td><code>calendar.events.readonly</code></td><td>Title, start time and link of upcoming events on your primary calendar.</td><td>To remind you before an event starts and open it in Google Calendar.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><b>Everything stays on your computer.</b> The app talks directly to Google from your own computer. There is no developer server; Google user data is never sent to, stored on, or seen by the developer.</p>
+    <p><b>Never sent to AI.</b> Gmail and Calendar data is never sent to any AI service, and is never used to develop, improve, or train AI or machine-learning models.</p>
+    <p><b>Read-only.</b> The app cannot send, change, or delete your mail or events.</p>
+  </div>
+  <p>우르부르르's use and transfer of information received from Google APIs to any other app will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2>Requirements</h2>
+  <p>macOS 11 or later (Apple Silicon or Intel), or Windows 11. A Wuruburu USB device is needed for the lights and buttons; without it the app can still show alerts in its settings screen.</p>
+
+  <section class="ko" id="ko" lang="ko">
+    <h2>우르부르르는</h2>
+    <p>2001년 딴지일보가 만든 인터넷 라디오 단말 <b>우르부르</b>를 요즘 맥과 윈도우에서 다시 쓰는 무료 오픈소스 프로그램입니다.
+      새 메일이나 다가오는 일정이 있으면 귀가 깜빡이고, 발 버튼을 누르면 메일을 열거나 제목을 읽어줍니다.</p>
+    <h3>Google 정보 사용</h3>
+    <ul>
+      <li><b>Gmail(머리글 전용):</b> 새로 받은 메일의 보낸 사람·제목·라벨만 봅니다. 본문과 첨부는 읽지 않습니다.</li>
+      <li><b>캘린더(읽기 전용):</b> 기본 캘린더의 다가오는 일정 제목·시작 시각·링크만 봅니다.</li>
+      <li><b>내 컴퓨터 안에서만:</b> 개발자 서버가 없고, Google 정보는 개발자에게 전송·저장되지 않습니다.</li>
+      <li><b>AI로 보내지 않음:</b> Gmail·캘린더 정보는 어떤 AI 서비스로도 보내지 않으며, AI 학습에 쓰이지 않습니다.</li>
+    </ul>
+    <p>우르부르르가 Google API로 받은 정보의 사용과 다른 앱으로의 전송은 Limited Use 요건을 포함한
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>을 따릅니다.
+      자세한 내용은 <a href="privacy.html#ko">개인정보처리방침</a>을 보세요.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/savorfamily/wurubururu/releases/latest">내려받기</a>
+      <a class="btn" href="https://github.com/savorfamily/wurubururu#readme">설치 안내</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  우르부르르 (wurubururu) · Made by 용팔이 (YONGFLY) / Savorfamily ·
+  <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> ·
+  <a href="https://github.com/savorfamily/wurubururu/issues">Contact</a><br>
+  Unofficial project, not affiliated with Ddanzi Group. Code under the MIT License.
+</div></footer>
+</body>
+</html>

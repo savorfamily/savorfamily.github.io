@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — 우르부르르 (wurubururu)</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <img src="assets/logo-120.png" alt="">
+  <a class="name" href="./">우르부르르 · wurubururu</a>
+  <nav>
+    <a href="./">Home</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="#ko">한국어</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <h1>Privacy Policy<small>우르부르르 (wurubururu) · Last updated: November 20, 2026</small></h1>
+
+  <p>This policy explains how the 우르부르르 (wurubururu) desktop app ("the app") handles your information,
+    including data it receives from Google APIs. The app is developed by Savorfamily (용팔이 / YONGFLY) and
+    published as open source at <a href="https://github.com/savorfamily/wurubururu">github.com/savorfamily/wurubururu</a>.</p>
+
+  <div class="callout">
+    <p><b>Summary.</b> The app runs only on your own computer. It reads the sender and subject of new emails and
+      your upcoming calendar events in order to show notifications. It never reads email bodies, never sends Google
+      data to the developer or to any AI service, and never sells or shares it.</p>
+  </div>
+
+  <h2>1. Google user data the app accesses</h2>
+  <p>When you choose "Sign in with Google" in the app's settings screen, the app requests these read-only permissions:</p>
+  <table>
+    <thead><tr><th>Scope</th><th>Data accessed</th></tr></thead>
+    <tbody>
+      <tr><td><code>https://www.googleapis.com/auth/gmail.metadata</code></td>
+          <td>For new unread messages in your inbox: message and thread IDs, labels (such as Inbox, Unread, Important, Starred, and inbox categories), and the <code>From</code> and <code>Subject</code> headers. The app does not and cannot read message bodies or attachments.</td></tr>
+      <tr><td><code>https://www.googleapis.com/auth/calendar.events.readonly</code></td>
+          <td>For events on your primary calendar in the next 18 hours: event ID, title, start time, and the link to the event.</td></tr>
+    </tbody>
+  </table>
+  <p>The app also receives an OAuth access token and refresh token from Google so it can keep checking for new mail and events without asking you to sign in again.</p>
+
+  <h2>2. How the data is used</h2>
+  <p>Google user data is used only to provide these user-facing features of the app:</p>
+  <ul>
+    <li>Blinking the Wuruburu device's ear lights when a new message or upcoming event exists. Red or green is chosen from Gmail's own Important and Starred labels; messages in the Promotions, Social and Forums categories are not announced.</li>
+    <li>Showing the sender and subject (or event title) in the app's local settings screen.</li>
+    <li>Reading the sender and subject (or event title) aloud using your computer's built-in text-to-speech, when you press the device's button or ask for a briefing.</li>
+    <li>Opening the message in Gmail or the event in Google Calendar in your web browser when you press the device's button.</li>
+  </ul>
+  <p>The data is not used for advertising, profiling, or any purpose other than these features.</p>
+
+  <h2>3. Where the data is processed and stored</h2>
+  <ul>
+    <li>All processing happens on your own computer. The app connects directly from your computer to Google's APIs. The developer operates no server, and Google user data is never transmitted to, stored by, or accessible to the developer.</li>
+    <li>The OAuth token is stored on your computer in <code>~/.wurubururu/google_token.json</code>, readable only by your user account.</li>
+    <li>Sender, subject and event details are kept only in the app's memory while the notification is shown, and are discarded when you dismiss the alert or quit the app. They are not written to disk.</li>
+    <li>The app's log file (<code>~/.wurubururu/wurubururu.log</code>) records app activity on your computer only.</li>
+  </ul>
+
+  <h2>4. Sharing and transfer</h2>
+  <ul>
+    <li><b>No sharing.</b> Google user data is not sold, rented, or shared with anyone, including the developer.</li>
+    <li><b>No AI.</b> Google user data is never sent to any artificial-intelligence service. The app's optional AI features (Gemini, Claude or Grok, using your own API key) only summarize alerts that do not come from Google, such as your website monitoring and build alerts.</li>
+    <li><b>No model training.</b> Google user data is never used to develop, improve, or train generalized or non-personalized artificial-intelligence or machine-learning models.</li>
+    <li><b>No human access.</b> No person reads your data. Because the developer never receives it, the developer cannot read it.</li>
+  </ul>
+
+  <h2>5. Limited Use disclosure</h2>
+  <p>우르부르르's use and transfer of information received from Google APIs to any other app will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.</p>
+
+  <h2>6. Your choices and deleting your data</h2>
+  <ul>
+    <li><b>Disconnect:</b> In the app's settings screen, choose "연결 해제" (Disconnect). This deletes the stored token from your computer.</li>
+    <li><b>Revoke access:</b> You can also remove the app's access at any time from your Google Account at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li><b>Remove everything:</b> Quitting the app and deleting the <code>~/.wurubururu</code> folder removes all data the app stored.</li>
+    <li>You can turn off Gmail or Calendar notifications separately in the settings screen.</li>
+  </ul>
+
+  <h2>7. Other information</h2>
+  <ul>
+    <li>API keys you enter for optional AI services are stored in your operating system's secure storage (macOS Keychain or Windows Credential Manager) and are sent only to the AI provider you chose.</li>
+    <li>When you download the app or check for updates, GitHub processes the request under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
+    <li>The app collects no analytics, crash reports, or usage statistics.</li>
+  </ul>
+
+  <h2>8. Security</h2>
+  <p>Connections to Google use HTTPS. Sign-in uses Google's OAuth 2.0 with a loopback redirect on your own computer, so your Google password is never seen or stored by the app. The token file is restricted to your user account.</p>
+
+  <h2>9. Children</h2>
+  <p>The app is not directed to children under 13 (or the minimum age in your country) and does not knowingly collect their data.</p>
+
+  <h2>10. Changes</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a new "Last updated" date. Any change in how Google user data is used will be reflected here before the app starts using data in the new way.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions or requests: please open an issue at <a href="https://github.com/savorfamily/wurubururu/issues">github.com/savorfamily/wurubururu/issues</a>.</p>
+
+  <section class="ko" id="ko" lang="ko">
+    <h2>개인정보처리방침 (한국어)</h2>
+    <p class="mute">최종 수정일: 2026년 11월 20일. 영어 원문과 내용이 다를 경우 영어 원문을 따릅니다.</p>
+    <div class="callout"><p><b>요약.</b> 우르부르르는 사용자의 컴퓨터에서만 동작합니다. 알림을 보여주기 위해 새 메일의 보낸 사람·제목과 다가오는 일정을 읽습니다.
+      메일 본문은 읽지 않으며, Google 정보를 개발자나 어떤 AI 서비스로도 보내지 않고, 판매하거나 공유하지 않습니다.</p></div>
+    <h3>1. 접근하는 Google 정보</h3>
+    <ul>
+      <li><code>gmail.metadata</code>: 받은편지함의 읽지 않은 새 메일에 대해 메일·대화 ID, 라벨(받은편지함, 읽지 않음, 중요, 별표, 카테고리), 보낸 사람(<code>From</code>)·제목(<code>Subject</code>) 머리글. 본문과 첨부는 읽지 않으며 읽을 수도 없습니다.</li>
+      <li><code>calendar.events.readonly</code>: 기본 캘린더의 앞으로 18시간 안의 일정에 대해 일정 ID, 제목, 시작 시각, 일정 링크.</li>
+      <li>다시 로그인하지 않고 확인을 계속하기 위한 OAuth 액세스·갱신 토큰.</li>
+    </ul>
+    <h3>2. 사용 목적</h3>
+    <p>우르부르르 기기의 귀 LED 점멸(빨강·초록은 Gmail의 중요·별표 라벨로 결정, 프로모션·소셜·포럼 메일은 알리지 않음), 설정 화면에 표시,
+      컴퓨터 내장 음성으로 보낸 사람·제목 읽어주기, 버튼을 누르면 Gmail·Google 캘린더에서 열기에만 씁니다. 광고·프로파일링 등 다른 목적에는 쓰지 않습니다.</p>
+    <h3>3. 처리·보관 위치</h3>
+    <p>모든 처리는 사용자의 컴퓨터에서 하며, 컴퓨터에서 Google API로 직접 연결합니다. 개발자 서버는 없고 Google 정보는 개발자에게 전송·저장되지 않습니다.
+      토큰은 <code>~/.wurubururu/google_token.json</code>에 사용자 계정만 읽을 수 있게 저장됩니다. 보낸 사람·제목·일정 정보는 알림이 떠 있는 동안 메모리에만 있다가,
+      알림을 확인하거나 프로그램을 끄면 사라지며 디스크에 기록하지 않습니다.</p>
+    <h3>4. 공유와 전송</h3>
+    <p>Google 정보는 개발자를 포함해 누구에게도 판매·대여·공유하지 않습니다. <b>어떤 AI 서비스로도 보내지 않으며</b>, AI·머신러닝 모델의 개발·개선·학습에 쓰지 않습니다.
+      선택 기능인 AI(사용자 본인의 키로 Gemini·Claude·Grok 사용)는 사이트 감시·빌드 알림처럼 Google에서 오지 않은 알림만 요약합니다. 사람이 데이터를 읽는 일도 없습니다.</p>
+    <h3>5. Limited Use 고지</h3>
+    <p>우르부르르가 Google API로 받은 정보의 사용과 다른 앱으로의 전송은 Limited Use 요건을 포함한
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>을 따릅니다.</p>
+    <h3>6. 선택권과 삭제</h3>
+    <p>설정 화면의 "연결 해제"로 저장된 토큰을 지울 수 있고, <a href="https://myaccount.google.com/permissions">Google 계정 권한 페이지</a>에서 언제든 접근 권한을 취소할 수 있습니다.
+      프로그램을 끄고 <code>~/.wurubururu</code> 폴더를 지우면 프로그램이 저장한 모든 정보가 삭제됩니다. Gmail·캘린더 알림은 각각 끌 수 있습니다.</p>
+    <h3>7. 기타</h3>
+    <p>AI용 API 키는 운영체제 보안 저장소(macOS 키체인·Windows 자격 증명 관리자)에 저장되며 사용자가 고른 AI 회사로만 전송됩니다. 사용 통계·오류 보고 등은 수집하지 않습니다.
+      내려받기와 업데이트 확인은 GitHub의 개인정보 처리방침에 따라 처리됩니다.</p>
+    <h3>8. 문의</h3>
+    <p><a href="https://github.com/savorfamily/wurubururu/issues">github.com/savorfamily/wurubururu/issues</a>에 남겨 주세요.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  우르부르르 (wurubururu) · Savorfamily · <a href="./">Home</a> · <a href="terms.html">Terms</a>
+</div></footer>
+</body>
+</html>
